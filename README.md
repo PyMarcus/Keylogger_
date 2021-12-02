@@ -11,7 +11,7 @@ Mas, para funcionar corretamente, é necessário executá-lo sempre ao iniciar o
 <br><br>
 
 <h2>Uso</h2>
-<b>Primeiro, configurar arquivo,pode-se movê-lo, automáticamente com o python:</b><br>
+<b>Primeiro, configurar arquivo.sh abaixo(pode-se movê-lo, automáticamente com o python):</b><br>
 O tipo de script para colocar na pasta etc/init.d/, para iniciá-lo:<br><br>
  #! /bin/sh
 # /etc/init.d/example
