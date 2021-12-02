@@ -20,7 +20,7 @@ case "$1" in<br>
   start)<br>
     echo ""<br>
     # run application you want to start<br>
-    python /etc/init.d/configuration.py &<br>
+    python3 /etc/init.d/configuration.py &<br>
     ;;<br>
   stop)<br>
     echo ""<br>
