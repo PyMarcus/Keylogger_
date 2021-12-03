@@ -24,8 +24,6 @@ case "$1" in<br>
     ;;<br>
   stop)<br>
     echo ""<br>
-   
-    ;;
   *)<br>
     echo "Usage: /etc/init.d/example{start|stop}"<br>
     exit 1<br>
@@ -35,7 +33,7 @@ esac<br>
 exit 0****<br>
 <br>
 <b>Dar a permissão:</b>
-sudo chmod 755 example
+sudo chmod 755 example.sh
 
 
 
