@@ -25,7 +25,7 @@ case "$1" in<br>
   stop)<br>
     echo ""<br>
    
-    ;;<br>
+    ;;
   *)<br>
     echo "Usage: /etc/init.d/example{start|stop}"<br>
     exit 1<br>
