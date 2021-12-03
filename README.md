@@ -24,8 +24,7 @@ case "$1" in<br>
     ;;<br>
   stop)<br>
     echo ""<br>
-    # kill application you want to stop<br>
-    killall python<br>
+   
     ;;<br>
   *)<br>
     echo "Usage: /etc/init.d/example{start|stop}"<br>
