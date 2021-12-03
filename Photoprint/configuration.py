@@ -13,6 +13,18 @@ class SendMail:
         self.__emaildestino = emaildestino
         self.__senha = senha
         self.__msg = msg
+        
+    @property
+    def meuemail(self):
+        return self.__meuemail
+    
+    @property
+    def emaildestion(self):
+        return self.__emaildestino
+    
+    @emaildestino.setter
+    def emaildestino(self, novo):
+        self.__emaildestino = novo
 
     def sendEmail(self):
         """Envia os e-mails pontuando prováveis efeitos"""
